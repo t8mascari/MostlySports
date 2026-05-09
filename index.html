@@ -1,1 +1,281 @@
-// test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostly Sports Wiki</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        header img {
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        h2 {
+            color: #dc3545;
+            border-bottom: 3px solid #dc3545;
+            padding-bottom: 0.5rem;
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 1rem 0;
+        }
+        li {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s ease;
+        }
+        li:hover {
+            background-color: #f0f8ff;
+        }
+        li:last-child {
+            border-bottom: none;
+        }
+        .athlete-card {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+        }
+        .athlete-photo {
+            flex-shrink: 0;
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid #dc3545;
+        }
+        .athlete-info {
+            flex: 1;
+        }
+        .athlete-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #dc3545;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .tab-button {
+            background: transparent;
+            border: none;
+            border-bottom: 4px solid transparent;
+            color: #555;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 0.85rem 1rem;
+        }
+        .tab-button:hover,
+        .tab-button.active {
+            color: #dc3545;
+            border-bottom-color: #dc3545;
+        }
+        .tab-panel {
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+        .coming-soon {
+            padding: 3rem 1rem;
+            text-align: center;
+            background-color: #f8f9fa;
+            border: 2px dashed #ced4da;
+            border-radius: 8px;
+        }
+        .coming-soon h2 {
+            border-bottom: none;
+            margin-top: 0;
+        }
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%);
+            color: white;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://yt3.googleusercontent.com/LKgiztQpPXma5K_VMVy4WsfgATTXtwI6B6HcmfPbp-LcAhn27u4Vi2cLHZ4rIsGRCZPO8mbr=s900-c-k-c0x00ffffff-no-rj" alt="Mostly Sports Logo">
+        <div>
+            <h1>Mostly Sports Wiki</h1>
+        </div>
+    </header>
+    <main>
+        <nav class="tabs" aria-label="Wiki sections">
+            <button class="tab-button active" type="button" data-tab="athlete-name-hall-of-fame">Name Hall of Fame</button>
+            <button class="tab-button" type="button" data-tab="jersday">Jersday History</button>
+        </nav>
+
+        <section id="athlete-name-hall-of-fame" class="tab-panel active">
+        <section id="hall-of-fame">
+            <h2>Athelete Name Hall of Fame</h2>
+            <ul id="hall-of-fame-list">
+            <li>
+                <div class="athlete-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlWXlxWk2Tr7BVr-LG44WpepJ4tUrRPHLPfw&s" alt="Asterisk Talley" class="athlete-photo">
+                    <div class="athlete-info">
+                        <span class="athlete-name">Asterisk Talley</span>
+                        <strong>Sport:</strong> Golf<br>
+                        <strong>Team:</strong> Amateur <br>
+                        <strong>Year/Tenure:</strong> Age 17
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="athlete-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN3LJwKelbCPJueaNXZ3IORdeU4F-Uqu1zIQ&s" alt="Beans Factor" class="athlete-photo">
+                    <div class="athlete-info">
+                        <span class="athlete-name">Beans Factor</span>
+                        <strong>Sport:</strong> Golf<br>
+                        <strong>Team:</strong> Manhattan College<br>
+                        <strong>Year/Tenure:</strong> Freshman
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="athlete-card">
+                    <img src="https://content.api.news/v3/images/bin/10314dca8c5e7108eeb4fdb7c960f9eb" alt="Montana Ham" class="athlete-photo">
+                    <div class="athlete-info">
+                        <span class="athlete-name">Montana Ham</span>
+                        <strong>Sport:</strong> Australian rules football<br>
+                        <strong>Team:</strong> Sydney Swans<br>
+                        <strong>Year/Tenure:</strong> Professional, drafted in 2022
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="athlete-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3xYIbSChJLLo2O7hoKp-VeEUsFp4ypTejkQ&s" alt="Zippy Fish" class="athlete-photo">
+                    <div class="athlete-info">
+                        <span class="athlete-name">Zippy Fish</span>
+                        <strong>Sport:</strong> Australian rules football<br>
+                        <strong>Team:</strong> Sydney Swans<br>
+                        <strong>Year/Tenure:</strong> Professional, drafted in 2024
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="athlete-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRauGxIVElvRy0J4MGgOixAFMBMcmkHWbwS6w&s" alt="Feline Poot" class="athlete-photo">
+                    <div class="athlete-info">
+                        <span class="athlete-name">Feline Poot</span>
+                        <strong>Sport:</strong> Softball<br>
+                        <strong>Team:</strong> Southeastern Louisiana<br>
+                        <strong>Year/Tenure:</strong> Graduated in 2025
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="athlete-card">
+                    <img src="https://static.hudl.com/users/temp/23231465_9bc75248ec6a49368bb2c4522446dc8f.jpg" alt="Abcde Rogers" class="athlete-photo">
+                    <div class="athlete-info">
+                        <span class="athlete-name">Abcde Rogers</span>
+                        <strong>Sport:</strong> Volleyball<br>
+                        <strong>Team:</strong> Walla Walla University<br>
+                        <strong>Year/Tenure:</strong> Transfer from Centralia College
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="athlete-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmG1P6dMLa9d9liJrfO31xXBTDh1o3nFoYTA&s" alt="Priscila Chinchilla" class="athlete-photo">
+                    <div class="athlete-info">
+                        <span class="athlete-name">Priscila Chinchilla</span>
+                        <strong>Sport:</strong> Football (soccer)<br>
+                        <strong>Team:</strong> Atlético Madrid and Costa Rican National Team<br>
+                        <strong>Year/Tenure:</strong> Age 24, professional since 2019
+                    </div>
+                </div>
+            </li>
+            </ul>
+        </section>
+        <section id="honorable-mentions">
+            <h2>Honorable Mentions</h2>
+            <ul>
+                <li>
+                    <div class="athlete-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7mhlYYujJwqyw74fA_CfcBNFj4OeNFxMkoA&s" alt="Fuzzy Benas" class="athlete-photo">
+                        <div class="athlete-info">
+                            <span class="athlete-name">Fuzzy Benas</span>
+                            <strong>Sport:</strong> Men's artistic gymnastics<br>
+                            <strong>Team:</strong> Oklahoma Sooners, United States national team<br>
+                            <strong>Year/Tenure:</strong> Redshirt Senior
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        </section>
+
+        <section id="jersday" class="tab-panel">
+            <div class="coming-soon">
+                <h2>Jersday Database</h2>
+                <p>Coming soon.</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="https://venmo.com/Tate-Mascari" target="_blank" rel="noopener">Support the Organizer</a>
+    </footer>
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        tabButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const tabId = button.dataset.tab;
+
+                tabButtons.forEach((tabButton) => tabButton.classList.remove('active'));
+                tabPanels.forEach((panel) => panel.classList.remove('active'));
+
+                button.classList.add('active');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
